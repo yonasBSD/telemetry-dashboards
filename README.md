@@ -1,4 +1,4 @@
-Telemetry Dashboards for KrakenD
+[Telemetry](Telemetry) Dashboards for KrakenD
 ================================
 This repository contains **example configurations** to support logging and metrics dashboards:
 
@@ -58,6 +58,13 @@ If you are using docker you can mount a volume using the content of this repo as
       - "./grafana/datasources/all.yml:/etc/grafana/provisioning/datasources/all.yml"
       - "./grafana/dashboards/all.yml:/etc/grafana/provisioning/dashboards/all.yml"
       - "./grafana/krakend:/var/lib/grafana/dashboards/krakend"
+
+## DataDog
+
+The provided DataDog dashboard requires that you have enabled `send_aggregation_metrics` on your DataDog collector, 
+to have the histograms, and counter metrics available. 
+
+![DataDog screenshot](screenshots/datadog-screenshot.png)
 
 ## Contribute!
 In this repository, you have an example of the ingestion process and dashboard visualization, and you can improve it in many ways.
