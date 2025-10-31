@@ -1,4 +1,4 @@
-[Telemetry](Telemetry) Dashboards for KrakenD
+Telemetry Dashboards for KrakenD
 ================================
 This repository contains **example configurations** to support logging and metrics dashboards:
 
