@@ -69,6 +69,12 @@ If you are using docker, you can optionally provision the `redis-datasource` plu
     environment:
       - GF_INSTALL_PLUGINS=redis-datasource
 
+## DataDog
+
+The provided DataDog dashboard requires that you have enabled `send_aggregation_metrics` on your DataDog collector, 
+to have the histograms, and counter metrics available. 
+
+![DataDog screenshot](screenshots/datadog-screenshot.png)
 ## Contribute!
 In this repository, you have an example of the ingestion process and dashboard visualization, and you can improve it in many ways.
 
