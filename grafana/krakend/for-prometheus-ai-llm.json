@@ -56,7 +56,6 @@
   "editable": true,
   "fiscalYearStartMonth": 0,
   "graphTooltip": 0,
-  "id": null,
   "links": [],
   "panels": [
     {
@@ -130,7 +129,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "krakend_llm_tokens_total{provider=~\"$provider\", app=~\"$app\", instance=~\"$instance\"}",
+          "expr": "sum(increase(krakend_llm_tokens_total{provider=~\"$provider\", app=~\"$app\", instance=~\"$instance\"}[$__range]))",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -196,7 +195,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "krakend_llm_tokens_in_total{provider=~\"$provider\", app=~\"$app\", instance=~\"$instance\"}",
+          "expr": "sum(increase(krakend_llm_tokens_in_total{provider=~\"$provider\", app=~\"$app\", instance=~\"$instance\"}[$__range]))",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -262,7 +261,7 @@
             "uid": "${DS_PROMETHEUS}"
           },
           "editorMode": "code",
-          "expr": "krakend_llm_tokens_out_total{provider=~\"$provider\", app=~\"$app\", instance=~\"$instance\"}",
+          "expr": "sum(increase(krakend_llm_tokens_out_total{provider=~\"$provider\", app=~\"$app\", instance=~\"$instance\"}[$__range]))",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -364,7 +363,7 @@
           "exemplar": false,
           "expr": "increase(krakend_llm_tokens_total{provider=~\"$provider\", app=~\"$app\", instance=~\"$instance\"}[$interval])",
           "instant": false,
-          "interval": "0",
+          "interval": "",
           "legendFormat": "__auto",
           "range": true,
           "refId": "A"
@@ -703,5 +702,6 @@
   "title": "AI LLM",
   "uid": "krl5rh5",
   "version": 2,
-  "weekStart": ""
+  "weekStart": "",
+  "id": null
 }
